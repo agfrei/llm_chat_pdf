@@ -1,0 +1,32 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "A.G. Freitas", email = "agf.adriano@gmail.com"},
+]
+dependencies = [
+    "fastapi>=0.103.2",
+    "pydantic-settings>=2.0.3",
+    "python-dotenv>=1.0.0",
+    "uvicorn[standard]>=0.23.2",
+    "filetype>=1.2.0",
+    "openai>=0.28.1",
+    "tiktoken>=0.5.1",
+    "langchain>=0.0.304",
+    "chromadb>=0.4.13",
+    "pymupdf>=1.23.4",
+    "beautifulsoup4>=4.12.2",
+    "gradio>=3.45.2",
+    "requests>=2.31.0",
+]
+requires-python = ">=3.11,<4"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=23.9.1",
+    "flake8>=6.1.0",
+    "isort>=5.12.0",
+]
