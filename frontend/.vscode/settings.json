@@ -1,0 +1,17 @@
+{
+    "python.testing.unittestEnabled": false,
+    "pylint.args": [
+        "--errors-only"
+    ],
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        }
+    }
+}

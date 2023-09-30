@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "LLM_CHAT_PDF",
+			"path": "."
+		},
+		{
+			"name": "API",
+			"path": "./api"
+		},
+		{
+			"name": "FRONTEND",
+			"path": "./frontend"
+		}
+	],
+	"settings": {}
+}
