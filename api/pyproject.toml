@@ -29,3 +29,6 @@ dev = [
     "flake8>=6.1.0",
     "isort>=5.12.0",
 ]
+
+[tool.pdm.scripts]
+api = "uvicorn src.app.main:app --reload"
