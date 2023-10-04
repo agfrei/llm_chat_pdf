@@ -6,8 +6,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    hf_api_key: str
-
     openai_api_key: str
     openai_model_name: str = "gpt-3.5-turbo"
 

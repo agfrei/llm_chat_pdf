@@ -1,7 +1,15 @@
 import json
+import os
 
 import gradio as gr
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_URL = os.getenv("API_URL", "localhost")
+API_PORT = os.getenv("API_URL", "8000")
+CHATBOT_PORT = os.getenv("API_URL", "8001")
 
 
 def format_chat_history(chat_history):
@@ -15,7 +23,7 @@ def format_chat_history(chat_history):
 def respond(message, chat_history):
     formatted_history = format_chat_history(chat_history)
 
-    url = "localhost:8000"
+    url = f"{API_URL}:{API_PORT}"
     path = "chat/"
     body = {"question": message, "history": formatted_history}
     headers = {"Content-Type": "application/json"}
@@ -37,10 +45,12 @@ def respond(message, chat_history):
 
 def upload_file(file):
     with open(file.name, "rb") as f:
+        url = f"{API_URL}:{API_PORT}"
+        path = "add/"
         return_msg = ""
 
         res = requests.post(
-            "http://localhost:8000/document/add",
+            f"http://{url}/{path}",
             files={"file": (file.name, f.read())},
         )
 
@@ -94,4 +104,4 @@ with gr.Blocks() as app:
 
 if __name__ == "__main__":
     gr.close_all()
-    app.launch(share=False, server_port=8001)
+    app.launch(share=False, server_port=int(CHATBOT_PORT))
