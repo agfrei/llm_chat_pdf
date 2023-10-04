@@ -1,5 +1,5 @@
 # llm_chat_pdf
-This project uses [LangChain](https://www.langchain.com/), [OpenAI GPT](https://openai.com/product) and [chroma](https://www.trychroma.com/) to index your PDF files and then let you chat with them.
+This project uses [LangChain](https://www.langchain.com/), [OpenAI GPT](https://openai.com/product) and [chroma](https://www.trychroma.com/) to index your PDF files and then let you chat with them using RAG technique.
 
 ## Running locally
 You should install [PDM](https://pdm.fming.dev/latest/) and then `pdm install` on both `api` and `frontend` folders.
@@ -25,7 +25,13 @@ pdm run chatbot
 ```
 This will start the chatbot UI on port `8001`, so you can navigate on your browser to `localhost:8001` and start talking.
 
-Remember to upload some documents before ask questions. Have fun!!!
+Remember to upload some documents before ask questions on the Documents tab:
+![Documents Tab](img/documents_tab.png)
+
+Then you can start chatting: 
+![Chat Tab](img/chat_tab.png)
+
+Have fun!!!
 
 ## Possible improvements or modifications
 

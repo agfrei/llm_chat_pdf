@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_URL = os.getenv("API_URL", "localhost")
-API_PORT = os.getenv("API_URL", "8000")
-CHATBOT_PORT = os.getenv("API_URL", "8001")
+API_PORT = os.getenv("API_PORT", "8000")
+CHATBOT_PORT = os.getenv("CHATBOT_PORT", "8001")
 
 
 def format_chat_history(chat_history):
